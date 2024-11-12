@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Cor de fundo escura */
+  color: #ffffff; /* Cor do texto clara */
+}
+
+h1 {
+  color: #ffffff; /* Cor do título clara */
+  margin: 20px 0; /* Margem ao redor do título */
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff; /* Fundo claro para o modal */
+  color: #000000; /* Texto escuro para contraste */
+  padding: 20px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.scoreboard-timeboard {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 900px; /* Largura do contêiner */
+}
+
+.scoreboard, .timeboard {
+  padding: 10px;
+  background-color: #ffffff; /* Fundo claro para scoreboard e timeboard */
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 300px; /* Largura do scoreboard e timeboard */
+  color: #000000; /* Cor do texto */
+}
+
+.scoreboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.scoreboard li {
+  margin: 5px 0;
+  color: #000000; /* Cor do texto na lista do scoreboard */
+}
+
+.game-over {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo claro para a tela de fim de jogo */
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 400px; /* Largura da tela de fim de jogo */
+  color: #000000; /* Cor do texto escuro na tela de fim de jogo */
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.game-area {
+  position: relative;
+  width: 900px;
+  height: 510px;
+  margin: 20px auto;
+  border: 2px solid black;
+  overflow: hidden;
+  background-image: url('./images/cidade.png'); /* Imagem de fundo da cidade */
+  background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+}
+
+.lixo-image {
+  width: 50px; /* Tamanho das imagens de lixo */
+  height: 50px; /* Tamanho das imagens de lixo */
+  filter: none; /* Remover o filtro branco das imagens de lixo */
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.8); /* Sombra verde para destaque */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre as imagens de lixo */
+  transition: transform 0.2s, filter 0.2s; /* Transição suave para o efeito de hover */
+}
+
+.lixo-image:hover {
+  transform: scale(1.15); /* Aumenta a imagem ao passar o mouse */
+  filter: brightness(1.2); /* Aumenta o brilho ao passar o mouse */
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc; /* Cinza quando desabilitado */
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.game-over h2, .game-over h3 {
+  color: #333; /* Cor do texto escuro na tela de fim de jogo */
+}
